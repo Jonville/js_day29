@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bd">
+
+    <div name="test">test</div>
+    <p id="html"></p>
+    <span></span>
+
+</body>
+</html>
+
+<script>
+    // console.log(document.getElementById("bd").childNodes[1].nodeName);
+
+    /*
+       document.childNodes[1] = <html>
+             *** text 는 줄바꿈을 의미함 ***
+       document.childNodes[1].childNodes[2].nodeName = <body> */
+    document.getElementById("html").innerHTML = 
+                document.childNodes[1].childNodes[2].nodeName;
+    
+    console.log(document.childNodes[1].childNodes);
+
+</script>

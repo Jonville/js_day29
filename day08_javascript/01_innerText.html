@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="text">InnerText로 표시하기</button>
+    <button onclick="html()">InnerHTML로 표시하기</button>
+    <h1>현재 시각 : </h1>
+    <div id="tt"></div>
+    
+</body>
+</html>
+
+<script>
+    var date = new Date();
+    
+    var text = document.getElementById("text");
+    text.onclick = function() {
+    var tt = document.getElementById("tt");
+        tt.innerText = "<i>" + date.toLocaleString() + "</i>";
+    }
+
+    function html(){        /*이렇게도 사용가능*/
+
+        document.getElementById("tt").innerHTML = "<i>" + date.toLocaleString() + "</i>";
+   
+   }</script>

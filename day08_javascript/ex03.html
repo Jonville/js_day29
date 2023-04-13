@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test">
+        내용 : <input type="text" id="txt">
+        색깔 : <input type="text" id="color">
+        <button onclick="button()">추가</button>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    function button() {
+        var item = document.createElement("p");  // li 태그 생성
+        var txt = document.getElementById("txt");  // 입력 정보(input) 객체 가져오기
+        var text = document.createTextNode(txt.value);  // 텍스트 정보 텍스트 노드로
+        item.appendChild(text);  // 텍스트노드를 자식노드로 추가
+
+        document.body.appendChild(item);
+
+        var style = document.createAttribute("style");
+        var color = document.getElementById("color");
+        style.value = "color : " + color.value;
+        item.setAttributeNode(style);
+
+    }
+
+</script>

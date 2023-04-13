@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            width: 1000px;
+            padding-left: 200px;
+            margin: auto;
+
+        }
+    
+        ul {
+            list-style: none;
+            
+        }
+        .box1 {
+            width: 300px;
+            height: 400px;
+            float: left;
+
+        }
+        .box2 {
+            width: 350px;
+            height: 400px;
+            line-height: 40px;
+            float: left;
+
+        }
+        .box3 {
+            clear: left;
+        }
+
+        button {
+            width: 300px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h2>자바스크립트</h2>
+
+            <div class="box1"><img src="images/java1.png" width="290" height="290" id="mainImg" >
+                <div>
+                    <img src="images/java2.png" width="80" height="80" id="img2" onclick="btn1()">
+                    <img src="images/java3.jpg" width="80" height="80" id="img3" onclick="btn2()">
+                    <img src="images/java4.png" width="80" height="80" id="img4" onclick="btn3()">
+                </div>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li>상품명 : 자바스크립트 책</li>
+                    <li>판매가 : 2,000,000원</li>
+                    <li>배송비 : 1,000,000원</li>
+                    <li>(2,000,001원 이상 구매시 무료)</li>
+                    <li>적립금 : 20원(0.0002%)</li>
+                    <li>발간일 : 1999.12.31</li>
+                    <li><button>장바구니 담기</button></li>
+                    <li> <a href="#" id="details" onclick="btn();">상세 설명 보기</a> </li>
+                </ul>
+            </div>
+
+
+            <div id="item" class="box3"></div>
+    </div>
+
+    
+</body>
+</html>
+
+
+<script>
+
+    function btn() {
+
+        var hr = document.createElement("hr");
+
+        var h3 = document.createElement("h3");
+        h3.innerHTML = "자바스크립트 책";
+
+        var ul = document.createElement("ul");
+        var li1 = document.createElement("li1");
+        li1.innerHTML = "출판사 : 구로디지털단지<br>";
+
+        var li2 = document.createElement("li2");
+        li2.innerHTML = "지 역 : 서울<br>";
+
+        var li3 = document.createElement("li3");
+        li3.innerHTML = "원가 : 2,500,000원<br>";
+
+        var li4 = document.createElement("li4");
+        li4.innerHTML = "판매가 : 2,000,000원<br>";
+
+        var li5 = document.createElement("li5");
+        li5.innerHTML = "저 자 : 홍길동<br> ";
+
+        var li6 = document.createElement("li6");
+        li6.innerHTML = "문 의 : hong@naver.com <br>";
+
+        var author = document.createElement("h4");
+        author.innerHTML = "저자의 말";
+
+        var authorTalk = document.createElement("div");
+        authorTalk.innerHTML = "자바스크립트의 모든것을 담기위해 노력했습니다. 속는셈 치고 구매해주세요.";
+
+        var chapter = document.createElement("h4");
+        chapter.innerHTML = "목차";
+
+        var ol = document.createElement("ol");
+        var l1 = document.createElement("li")
+        l1.innerHTML = "자바스크립트 기초";
+
+        var l2 = document.createElement("li")
+        l2.innerHTML = "자바스크립트 심화 ";
+
+        var l3 = document.createElement("li")
+        l3.innerHTML = "자바스크립트 활용";
+
+        document.getElementById("item").appendChild(hr);
+        document.getElementById("item").appendChild(h3);
+        document.getElementById("item").appendChild(ul);
+        document.getElementById("item").appendChild(li1);
+        document.getElementById("item").appendChild(li2);
+        document.getElementById("item").appendChild(li3);
+        document.getElementById("item").appendChild(li4);
+        document.getElementById("item").appendChild(li5);
+        document.getElementById("item").appendChild(li6);
+        document.getElementById("item").appendChild(author);
+        document.getElementById("item").appendChild(authorTalk);
+        document.getElementById("item").appendChild(chapter);
+        document.getElementById("item").appendChild(ol);
+        document.getElementById("item").appendChild(l1);
+        document.getElementById("item").appendChild(l2);
+        document.getElementById("item").appendChild(l3);
+
+    }
+
+    function btn1() {
+        var main = document.getElementById("mainImg");
+        main.src = "images/java2.png";
+    }
+    function btn2() {
+        var main = document.getElementById("mainImg");
+        var src = main.getAttributeNode("src");
+        src.value = "images/java3.jpg";
+        main.setAttributeNode(src);
+    }
+    function btn3() {
+        var main = document.getElementById("mainImg");
+        var src = main.getAttributeNode("src");
+        src.value = "images/java4.png";
+        main.setAttributeNode(src);
+    }
+
+</script>

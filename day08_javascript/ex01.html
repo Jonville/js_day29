@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>자바스크립트</h1>
+
+    <a href="#" onclick="button(); this.onclick='';">더 보기</a>
+
+    <div id="info"></div>
+</body>
+</html>
+
+<script>
+
+    function button() {
+     
+        var newP = document.createElement("div");
+        var txtNode = document.createTextNode("자바스크립트 재밌따~~~");
+        newP.appendChild(txtNode);
+
+        var newImg = document.createElement("img");
+        var srcNode = document.createAttribute("src");
+        srcNode.value = "images/prod1.jpg";
+        newImg.setAttributeNode(srcNode);
+
+        document.getElementById("info").appendChild(newP);
+        document.getElementById("info").appendChild(newImg);    /*실제 출력*/
+
+    }
+
+</script>

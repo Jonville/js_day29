@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bd">
+
+    <h1 id="head">자바스크립트 노드 예제</h1>
+    <div id="txt1">첫번째 텍스트</div>
+    <div id="txt2">두번째 텍스트</div>
+
+</body>
+</html>
+
+<script>
+    /*
+       document.childNodes[1] = <html>
+             *** text 는 문자열 자체도 자식노드로 봄 ***
+       document.childNodes[1].childNodes[2].nodeName = <body> */
+    
+    var headText = document.getElementById("head").firstChild.nodeValue;  //nodeValue를 해야 제대로된 값이 나옴
+    document.getElementById("txt1").innerHTML = headText;
+    
+    console.log(document.getElementById("head").firstChild);    //첫번째 자식노드의 값
+        // nodeValue : 자바스크립트 노드 예제
+
+</script>

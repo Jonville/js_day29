@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="javaS"> 자바스크립트 테스트 </h3>
+    <div id="list">
+        <p>자바</p>
+        <p id="ins">데이터베이스</p>
+        <p>HTML</p>
+    </div>
+
+    <button onclick="insertTxt()">테스트</button>
+
+</body>
+</html>
+
+<script>
+
+    // function append() {
+    //     var list = document.getElementById("list");
+    //     var java = document.getElementById("javaS");
+    //     list.appendChild(java); // 리스트 맨 뒤에 넣음
+    // }
+
+    // function insert() {
+    //     var list = document.getElementById("list");
+    //     var java = document.getElementById("javaS");
+    //     var ins = document.getElementById("ins");
+    //     list.insertBefore(java , ins);  // 넣을 요소 , 기준이 되는친구
+    // }
+
+    function insertTxt() {
+        var txt = document.getElementById("javaS").firstChild;
+        txt.insertData(7 , " 정말 어렵다");  // 7번째에 글자입력
+    }
+
+</script>

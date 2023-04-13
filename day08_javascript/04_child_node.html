@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bd">
+
+    <div id="head">
+        자바스크립트 노드 예제
+        <span>어렵다</span>
+        <p>정말 어렵다</p>
+        <div>정말 어렵다</div>
+    </div>
+    <div id="txt1">첫번째 텍스트</div>
+    <div id="txt2">두번째 텍스트</div>
+
+</body>
+</html>
+
+<script>
+    
+    console.log(document.getElementById("head").childNodes);
+        // 텍스트와 태그 둘다 자식노드로 봄
+
+    var list = document.getElementById("head").childNodes;
+    for(var i = 0 ; i < list.length ; i++) {
+        if(list[i].nodeType == 1){
+            list[i].style.color = "red";
+        }   
+        if(list[i].nodeName =="SPAN"){
+            list[i].style.backgroundColor = "#ccc";
+        }
+
+        console.log(list[i].nodeType)
+        console.log(list[i].nodeName)
+
+    }// nodeType => 1이면 태그 , 요소 / 3이면 text
+
+</script>
